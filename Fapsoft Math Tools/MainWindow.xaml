@@ -1,0 +1,122 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Fapsoft Math Tools" Height="550" Width="525" MinHeight="550" MinWidth="525"
+        MaxWidth="525">
+    <TabControl>
+        <TabItem Header="PValue Calculator">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0">
+                    <TextBlock Text="Enter Number of Trials in Section 1:" Margin="0,3" HorizontalAlignment="Center">
+                    </TextBlock>
+                    <TextBox Name="infobox1" Width="200" Margin="0,3">
+                    </TextBox>
+                    <TextBlock Text="Enter Number of Trials in Section 2:" Margin="0,3" HorizontalAlignment="Center">
+                    </TextBlock>
+                    <TextBox Name="infobox2" Width="200" Margin="0,3">
+                    </TextBox>
+                    <Button Content="Set Trial Number" HorizontalAlignment="Center" Margin="0,3" Name="button" Click="button_click">
+                    </Button>
+                    <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,3" Name="button1" Click="button1_click">
+                    </Button>
+                    <TextBlock Text="Results:" Margin="0,3" HorizontalAlignment="Center">
+                    </TextBlock>
+                    <TextBox Name="pResults" Text="" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,3">
+                    </TextBox>
+                </StackPanel>
+                <Grid Name="grid1" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto">
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="Data For Section 1:" Margin="0,3" HorizontalAlignment="Center">
+                            </TextBlock>
+                            <StackPanel Name="data1">
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <ScrollViewer Grid.Column="1"  VerticalScrollBarVisibility="Auto">
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="Data For Section 2:" Margin="0,3" HorizontalAlignment="Center">
+                            </TextBlock>
+                            <StackPanel Name="data2">
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Arabic/Roman Numeral Converter">
+            <Grid>
+                <StackPanel>
+                    <TextBlock Text="Select The Desired Conversion:" Margin="0,3" HorizontalAlignment="Center">
+                    </TextBlock>
+                    <ListBox Name="conChoice" Width="200" HorizontalAlignment="Center" Margin="0,3">
+                        <ListBoxItem Content="Arabic to Roman" HorizontalAlignment="Center" Name="AtoR"></ListBoxItem>
+                        <ListBoxItem Content="Roman to Arabic" HorizontalAlignment="Center" Name="RtoA"></ListBoxItem>
+                    </ListBox>
+                    <TextBlock Text="Enter The Number To Be Converted:" Margin="0,3" HorizontalAlignment="Center">
+                    </TextBlock>
+                    <TextBox Name="infobox3" Width="200" Margin="0,3">
+                    </TextBox>
+                    <Button Name="Convert" Margin="0,3" HorizontalAlignment="Center" Content="Convert" Click="Convert_Click">
+                    </Button>
+                    <TextBlock Text="Results:" Margin="0,3" HorizontalAlignment="Center">
+                    </TextBlock>
+                    <TextBox Name="Result" IsReadOnly="True" Margin="0,3">
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Prime Checker">
+            <Grid>
+                <StackPanel>
+                    <TextBlock Text="Enter The Number To Be Checked:" Margin="0,3" HorizontalAlignment="Center">
+                    </TextBlock>
+                    <TextBox Name="infobox4" Width="200" Margin="0,3">
+                    </TextBox>
+                    <Button Name="Check" Margin="0,3" HorizontalAlignment="Center" Content="Check" Click="Check_Click">
+                    </Button>
+                    <TextBlock Text="Results:" Margin="0,3" HorizontalAlignment="Center">
+                    </TextBlock>
+                    <TextBox Name="answer" IsReadOnly="True" Margin="0,3">
+                    </TextBox>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Matrix Tool">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition  />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0">
+                        <TextBlock Text="Enter The Length Of The Matrix:" Margin="0,3" HorizontalAlignment="Center">
+                        </TextBlock>
+                        <TextBox Name="infobox5" Width="200" Margin="0,3">
+                        </TextBox>
+                        <Button Content="Set Matrix Length" HorizontalAlignment="Center" Margin="0,3" Name="button2" Click="button2_Click">
+                        </Button>
+                        <Button Content="Calculate" HorizontalAlignment="Center" Margin="0,3" Name="button3" Click="button3_Click">
+                        </Button>
+                    <TextBlock Text="Results:" Margin="0,3" HorizontalAlignment="Center">
+                    </TextBlock>
+                    <TextBox Name="mResults" IsReadOnly="True" VerticalAlignment="Stretch" Margin="0,3">
+                    </TextBox>
+                    <TextBlock Text="Enter Matrix:" Margin="0,3" HorizontalAlignment="Center">
+                    </TextBlock>
+                </StackPanel>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Row="1">
+                    <Grid Name="MatrixName" HorizontalAlignment="Center">
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>
