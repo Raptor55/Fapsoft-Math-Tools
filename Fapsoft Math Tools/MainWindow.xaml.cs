@@ -37,7 +37,6 @@ namespace WpfApplication1
             {
                      //- The row 0 has the pValue
                      {  0.50, 0.20, 0.10,  0.05,  0.02,  0.01,   0.005,   0.002, 0.001  } //-  0
-
                     , { 1.00, 3.08, 6.31, 12.71, 31.82, 63.66, 127.32 , 318.31 , 636.62 } //-  1
                     , { 0.82, 1.89, 2.92,  4.30,  6.97,  9.93,  14.09 ,  22.33 ,  31.56 } //-  2
                     , { 0.77, 1.64, 2.35,  3.18,  4.54,  5.84,   7.45 ,  10.22 ,  12.92 } //-  3
@@ -57,10 +56,6 @@ namespace WpfApplication1
             double pValue = 0;
             bool isFound = false;
             int rowToUse = trialCount - 2;
-
-            if (rowToUse < 11)
-            {
-            }
             else if (rowToUse < 15)
             {
                 rowToUse = 11;
@@ -77,7 +72,7 @@ namespace WpfApplication1
             {
                 rowToUse = 14;
             }
-            else
+            else if (rowToUse > 100)
             {
                 throw new NotSupportedException("TrialCount not supported: " + trialCount);
             }
