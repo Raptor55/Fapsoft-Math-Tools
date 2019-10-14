@@ -513,7 +513,7 @@ namespace WpfApplication1
         {             
             if(ulong.TryParse(infobox4.Text, out input) == true)
             {
-                    return true;
+                return true;
             }
             
             return false;
