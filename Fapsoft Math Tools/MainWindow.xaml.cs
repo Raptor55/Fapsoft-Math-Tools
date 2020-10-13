@@ -509,7 +509,7 @@ namespace WpfApplication1
             return true;
         }
 
-        bool antiStupid()
+        bool proSmart()
         {             
             if(ulong.TryParse(infobox4.Text, out input) == true)
             {
@@ -523,7 +523,7 @@ namespace WpfApplication1
         {
             bool response;
             
-            if (antiStupid())
+            if (proSmart())
             {
                 response = checker();  
                 switch (response)
